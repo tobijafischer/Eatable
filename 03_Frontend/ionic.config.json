@@ -1,0 +1,7 @@
+{
+  "name": "eatable",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

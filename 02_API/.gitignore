@@ -1,0 +1,5 @@
+.DS_Store
+
+# init file is private (contains db credentials)
+core/init.php
+**/init.php

@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "eatable.app",
+               "sha256_cert_fingerprints": ["F9:5F:B9:CF:9B:26:25:12:3F:BE:6B:0F:B5:98:2A:3E:C3:BB:04:AC:71:35:49:C7:51:CB:16:AE:90:41:71:F1"] }
+}]
