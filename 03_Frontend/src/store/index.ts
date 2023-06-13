@@ -7,18 +7,7 @@ import { RecipeFilter } from '@/types/recipeTypes';
 interface UserAuthObject {
   userId: number;
   authToken: string;
-  // [key: string]: any;
 }
-
-// interface UserInfo {
-//   userEmail: string;
-//   userName: string;
-//   userAvatar: string;
-//   firstName: string;
-//   lastName: string;
-//   favoriteShops: Array<number>;
-//   favoriteRecipes: Array<number>;
-// }
 
 export default createStore({
     state: {
@@ -29,11 +18,6 @@ export default createStore({
         userInfo: {} as SingleUser
       },
       filter: {} as RecipeFilter
-      // filter: {
-      //   recipeCategories: [] as Array<number>,
-      //   recipeTags: [] as Array<number>,
-      //   recipeStock: [] as Array<number>,
-      // }
     },
     mutations: {
       SET_LOGIN_STATE(state, bool) {

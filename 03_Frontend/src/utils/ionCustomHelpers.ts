@@ -21,10 +21,3 @@ export async function openToastOptions(title: string, color: ToastColor, duratio
       })
     await toast.present();
 }
-
-// export function scrollToTop(selector = 'ion-content') {
-//   const el = document.querySelector(selector);
-//   if ( el ) {
-//     el.scrollToTop();
-//   }
-// }

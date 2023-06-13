@@ -111,12 +111,6 @@ import { IonApp, IonRouterOutlet, isPlatform } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import router from '@/router';
 import { Network } from '@capacitor/network';
-// import { getCookie } from '@/utils/methods/cookieMethods';
-// import { validateUser } from '@/utils/methods/userMethods';
-// import axios from 'axios';
-
-// import { RecipeFilter } from '@/types/recipeTypes';
-// import { tblVars } from '@/variables/environmentVariables';
 
 export default defineComponent({
   name: 'App',
@@ -124,12 +118,6 @@ export default defineComponent({
     IonApp,
     IonRouterOutlet,
   },
-  // watch: {
-  //   $route(to, from) {
-  //     console.log(from);
-  //     console.log(to);
-  //   },
-  // },
   data() {
     return {
       userOffline: false,
@@ -147,43 +135,6 @@ export default defineComponent({
     Network.addListener('networkStatusChange', () => {
       this.updateCurrentNetworkStatus();
     });
-
-    /* check user defaults */
-    // const sessionToken = getCookie('sessionToken');
-    // if (sessionToken) {
-    //   validateUser(sessionToken)
-    //     .then(userId => {
-    //       // user is validated, start auth
-    //       axios
-    //         .post(`${tblVars.baseApiUrl}/index.php`, {
-    //           headers: {
-    //             authorization: sessionToken,
-    //           },
-    //           action: 'getUser',
-    //           userId: userId,
-    //         })
-    //         .then(response => {
-    //           // set default values for recipe filtering here
-    //           // console.log(response.data.default_diet);
-    //           // const newRecipeFilterObject: RecipeFilter = {
-    //           //   ingredientStock: {
-    //           //     filterInclude: true,
-    //           //     ingredients: response.data.ingredient_stock,
-    //           //   },
-    //           //   categories: [],
-    //           //   tags: response.data.default_diet,
-    //           // };
-    //           // this.$eatableStorage.set('recipeFilter', JSON.stringify(newRecipeFilterObject));
-    //           // set default values for location filtering here
-    //           // const newLocationFiltering: Array<number> = response.data.default_location;
-    //           // this.$eatableStorage.set('locationFilter', JSON.stringify(newLocationFiltering));
-    //         });
-    //     })
-    //     .catch(e => {
-    //       // invalid session token
-    //       console.error(e);
-    //     });
-    // }
   },
   methods: {
     onboardingCheck() {

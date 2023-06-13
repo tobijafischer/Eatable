@@ -53,9 +53,6 @@ import {
   storefrontOutline,
 } from 'ionicons/icons';
 import store from '@/store';
-// import axios from 'axios';
-// import { getCookie } from '@/utils/cookieMethods';
-// import { validateUser, setUserInfo } from '@/utils/methods/userMethods';
 
 export default defineComponent({
   name: 'Tabs',
@@ -75,26 +72,6 @@ export default defineComponent({
       loggedInComputed,
     };
   },
-  // mounted() {
-  //   const authToken = getCookie('sessionToken');
-  //   if ( authToken ) {
-  //     validateUser(authToken)
-  //     .then(userId => {
-  //         store.dispatch('initiateUserLogin', {
-  //           userId: userId,
-  //           authToken: authToken
-  //         });
-  //         if ( !this.currentUserInfo.userName ) {
-  //           setUserInfo(authToken, userId);
-  //         } else {
-  //           console.log( this.currentUserInfo );
-  //         }
-  //       })
-  //     .catch(e => {
-  //       console.error(e);
-  //     });
-  //   }
-  // },
   computed: {
     currentUserInfo() {
       return store.getters.getUserInfo;
@@ -114,7 +91,6 @@ ion-icon {
 ion-tab-button.tab-selected {
   pointer-events: none;
 }
-/* ion-tab-button.tab-selected ion-icon::before, */
 ion-tab-button.tab-selected ion-label {
   font-weight: 600;
   color: var(--ion-color-primary);

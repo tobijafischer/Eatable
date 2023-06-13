@@ -136,9 +136,6 @@ export default defineComponent({
     debouncedSearchTerm(term) {
       this.sortShopEntries(this.shopEntries, term);
     },
-    // shopEntries() {
-    //   this.sortShopEntries(this.shopEntries);
-    // },
   },
   mounted() {
     this.getshopsData('5000');

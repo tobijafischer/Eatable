@@ -120,17 +120,6 @@ export default defineComponent({
         router.push('/sammlung/rezepte');
       }
     },
-    // getUserFavoriteShopIds() {
-    //   this.$eatableStorage
-    //     .get('favoriteShops')
-    //     .then(response => {
-    //       const shopIdsArray = JSON.parse(response);
-    //       this.favoriteShopIds = shopIdsArray;
-    //     })
-    //     .catch(error => {
-    //       console.error(error);
-    //     });
-    // },
     fetchShopData(favoriteShopsIdArray: Array<number>) {
       axios
         .post(`${tblVars.baseApiUrl}/index.php`, {

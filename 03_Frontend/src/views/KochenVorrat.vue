@@ -18,11 +18,6 @@
           Lebensmittel vergessen gehen und die Rezeptsuche lässt sich automatisch auf den eigenen Vorrat abstimmen.
         </p>
 
-        <!-- slim select input -->
-        <!-- <select id="slim-select" multiple>
-          <option data-placeholder="true"></option>
-        </select> -->
-
         <h3>Filter</h3>
         <ion-item>
           <ion-label>Kategorie</ion-label>
@@ -143,12 +138,6 @@ export default defineComponent({
       } as RecipeFilter,
     };
   },
-  // computed: {
-  //   joinedCategoryIds() {
-  //     const test = this.activeRecipeCategoryIds.join();
-  //     return test;
-  //   },
-  // },
   watch: {
     activeRecipeTagIds: {
       handler(newVal) {

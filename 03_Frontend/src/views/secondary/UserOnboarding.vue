@@ -12,7 +12,6 @@
             <ion-img src="/img/onboarding/eatable-einkaufen.svg"></ion-img>
             <h2>Umweltbewusst Einkaufen</h2>
             <p>Erhalte Informationen über die Saisonalität und Nachhaltigkeit von Zutaten. Finde Shops und Hofläden, wo du frisch und regional einkaufen kannst.</p>
-            <!-- <p>Sehe auf einen Blick, welche Zutaten nachhaltig sind und gerade Saison haben. Und erfahre, wo du sie in deiner Nähe einkaufen kannst.</p> -->
             <ion-button expand="block" fill="solid" @click="slideToNext()">weiter</ion-button>
             <ion-button style="opacity: 0; visibility: hidden; pointer-events: none;" @click="slideToPrev()">zurück</ion-button>
           </div>
@@ -22,7 +21,6 @@
             <ion-img src="/img/onboarding/eatable-kochen.svg"></ion-img>
             <h2>Nachhaltig Kochen</h2>
             <p>Finde nachhaltige und saisonale Rezepte für jede Gelegenheit. Behalte im Auge, welche Zutaten du noch zu Hause hast und finde heraus, was sich damit kochen lässt.</p>
-            <!-- <p>Finde nachhaltige Rezepte, die saisonale und umweltschonende Zutaten verwenden. Oder erhalte Vorschläge basierend auf deinen Vorräten.</p> -->
             <ion-button expand="block" fill="solid" @click="slideToNext()">weiter</ion-button>
             <ion-button fill="clear" color="primary" @click="slideToPrev()">zurück</ion-button>
           </div>
@@ -32,18 +30,10 @@
             <ion-img src="/img/onboarding/eatable-entdecken.svg"></ion-img>
             <h2>Möglichkeiten Entdecken</h2>
             <p>Es gibt immer mehr Initiativen und Möglichkeiten, um unsere Ernährung nachhaltiger zu machen. Mit eatable erfährst du wie.</p>
-            <!-- <p>Mit eatable lassen sich neue Projekte und Initiativen zum Thema nachhaltige Ernährung entdecken.</p> -->
             <ion-button expand="block" fill="solid" @click="onboardingCompleted()">zur App</ion-button>
             <ion-button fill="clear" color="primary" @click="slideToPrev()">zurück</ion-button>
           </div>
         </ion-slide>
-        <!-- <ion-slide>
-          <h2>Loslegen</h2>
-          <p>Das wars, wir wollen dich nicht länger aufhalten. Spring in die App und entdecke Leckeres und Nachhaltiges.</p>
-          <ion-button>
-            zur App
-          </ion-button>
-        </ion-slide> -->
       </ion-slides>
     </ion-content>
   </ion-page>
@@ -75,10 +65,6 @@ export default defineComponent({
     const slidesRef = ref();
     const options = {
       keyboard: true,
-      // navigation: {
-      //   prevEl: '#swiper-prev',
-      //   nextEl: '#swiper-next',
-      // },
     }
 
     const slideToPrev = async () => {

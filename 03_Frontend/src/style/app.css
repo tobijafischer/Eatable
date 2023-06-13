@@ -24,27 +24,7 @@ img {
   height: auto;
 }
 
-/* make cards archives work on all screen sizes */
-/* .card-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-.card-wrapper ion-card {
-  width: 100%;
-}
-@media screen and (min-width: 540px) {
-  .card-wrapper ion-card {
-    width: calc(50% - 20px);
-  }
-}
-@media screen and (min-width: 1080px) {
-  .card-wrapper ion-card {
-    width: calc(25% - 20px);
-  }
-} */
-
 .card-wrapper {
-  /* --my-height: 240px; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, auto));
   align-items: flex-start;

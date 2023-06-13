@@ -2,11 +2,6 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <!-- <ion-buttons v-if="loginState" slot="end">
-          <ion-button v-on:click="logoutUser()">
-            <ion-icon class="o-export-1" slot="icon-only"></ion-icon>
-          </ion-button>
-        </ion-buttons> -->
         <ion-title>Profil</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -137,8 +132,6 @@ import {
   IonToolbar,
   IonTitle,
   IonContent,
-  // IonButtons,
-  // IonButton,
   IonIcon,
   IonItem,
   IonLabel,
@@ -170,8 +163,6 @@ export default defineComponent({
     IonTitle,
     IonContent,
     IonPage,
-    // IonButtons,
-    // IonButton,
     IonIcon,
     IonItem,
     IonLabel,

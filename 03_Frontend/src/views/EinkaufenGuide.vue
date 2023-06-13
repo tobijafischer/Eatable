@@ -69,7 +69,6 @@ import {
   IonInput,
   IonIcon,
 } from '@ionic/vue';
-// import EinkaufenTabs from '@/views/EinkaufenTabs.vue';
 import IngredientCard from '@/components/cards/IngredientCard.vue';
 import axios from 'axios';
 import { SingleIngredient } from '@/types/ingredientTypes';

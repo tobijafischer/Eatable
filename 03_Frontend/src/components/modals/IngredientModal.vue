@@ -21,16 +21,16 @@
       <p v-if="ingredient.nutrition_value">
         Nutrition: <strong>{{ ingredient.nutrition_value }}</strong>
       </p>
-      <h2 v-if="ingredient.co2_16fu_ohne_flug > 0 || ingredient.g_co2_100g_ohne_flug > 0">
+      <h2 v-if="(ingredient.co2_16fu_ohne_flug && ingredient.co2_16fu_ohne_flug > 0) || (ingredient.g_co2_100g_ohne_flug && ingredient.g_co2_100g_ohne_flug > 0)">
         Nachhaltigkeit
       </h2>
-      <p v-if="ingredient.co2_16fu_ohne_flug > 0" style="line-height: 1.5em;">
+      <p v-if="ingredient.co2_16fu_ohne_flug && ingredient.co2_16fu_ohne_flug > 0" style="line-height: 1.5em;">
         Emissionen:
         <strong>{{ ingredient.co2_16fu_ohne_flug }}</strong
         ><span style="font-size: 0.75em;"> g CO2 / 1.6 Food Unit</span>
       </p>
       <p
-        v-if="ingredient.co2_16fu_ohne_flug > 0 && klimaPercent"
+        v-if="ingredient.co2_16fu_ohne_flug && ingredient.co2_16fu_ohne_flug > 0 && klimaPercent"
         style="font-size:12px; line-height: 1.5em; opacity: 0.75;"
       >
         Diese Zutat produziert
@@ -38,7 +38,7 @@
         durchschnittliche Zutat. Es wird von einem Flugzeug-freien Transport ausgegangen.
       </p>
       <p
-        v-if="ingredient.g_co2_100g_ohne_flug && ingredient.g_co2_100g_ohne_flug !== '0'"
+        v-if="ingredient.g_co2_100g_ohne_flug && ingredient.g_co2_100g_ohne_flug !== 0"
         style="font-size: 0.75em;opacity: 0.75;"
       >
         Für 100g {{ ingredient.title }} werden ca. {{ Math.round(ingredient.g_co2_100g_ohne_flug) }}g CO2 benötigt.

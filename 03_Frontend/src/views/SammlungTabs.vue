@@ -39,15 +39,10 @@ export default defineComponent({
     IonRouterOutlet,
   },
   setup() {
-    // const loggedInComputed = computed( () => {
-    //   return store.getters.getLoginState;
-    // })
-
     return {
       personAddOutline,
       radioOutline,
       restaurantOutline,
-      // loggedInComputed
     };
   },
 });

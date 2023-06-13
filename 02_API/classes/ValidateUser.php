@@ -50,11 +50,6 @@ class ValidateUser {
 								$this->addError("{$rule_value} must match {$item}");
 							}
 							break;
-						// case 'required':
-						// 	if (empty($value)) {
-						// 		$this->addError("{$item} required");
-						// 	}
-						// 	break;
 						case 'unique':
 							$check = $this->_db->get($rule_value, array($item, '=', $value));
 							if ($check->count()) {

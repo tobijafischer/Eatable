@@ -1,6 +1,6 @@
 <?php
 
-	// some defaults
+	// defaults
 	$output = 'default';
 	$limit = null;
 	if (isset($input->limit)) {
@@ -18,8 +18,7 @@
 	} else {
 		$sort = '';
 	}
-	// $headersCheck = isset($input->headers->authorization);
-	$headersCheck = true;
+	$headersCheck = isset($input->headers->authorization);
 	$category = new Category;
 	$discovery = new Discovery;
 	$ingredient = new Ingredient;
@@ -30,11 +29,6 @@
 
 	// check check, one two...
 	switch ($input->action) {
-
-		// test
-		case 'test':
-			$output = 'test';
-			break;
 		// user
 		case 'userValidate':
 			if ($headersCheck && $input->headers->authorization !== '') {
@@ -61,7 +55,6 @@
 				if ($login === true) {
 					$row = $token->getByUserId($user->get($email)->id);
 					$tokenId = $row->id;
-					// $token->update($tokenId, $authToken);
 					$token->create(array(
 						'token' => $authToken,
 						'user_id' => $tokenId

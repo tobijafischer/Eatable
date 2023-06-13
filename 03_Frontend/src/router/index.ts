@@ -4,9 +4,6 @@ import store from '@/store';
 import { eraseCookie, getCookie } from '@/utils/methods/cookieMethods';
 import { validateUser, setUserInfo } from '@/utils/methods/userMethods';
 import Tabs from '@/views/Tabs.vue';
-// import KochenTabs from '@/views/KochenTabs.vue';
-// import EinkaufenTabs from '@/views/EinkaufenTabs.vue';
-// import SammlungTabs from '@/views/SammlungTabs.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {

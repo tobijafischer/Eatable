@@ -258,19 +258,6 @@ export default defineComponent({
     },
   },
   methods: {
-    // fetchRecipeBySlug(slug: string | string[]) {
-    //   axios.post(`${tblVars.baseApiUrl}/index.php`, {
-    //     action: 'getBySlug',
-    //     slug: slug,
-    //     table: 'recipes'
-    //   })
-    //   .then( response => {
-    //     console.log(response);
-    //   })
-    //   .catch( error => {
-    //     console.error(error);
-    //   })
-    // },
     openInAppBrowser,
     getKlimaScoreRanking,
     fetchRecipe(slug: string | string[]) {
@@ -430,11 +417,6 @@ div.ion-page[data-klimaranking='E'] {
 ion-chip {
   background: var(--klimascore-background);
 }
-/* ion-footer ion-toolbar {
-  --background: var(--ion-background-color);
-  --border-color: var(--ion-color-secondary);
-  box-shadow: 0px 0px 20px 20px var(--ion-background-color);
-} */
 ion-header {
   --background: var(--klimascore-background, var(--ion-color-light));
   --ion-background-color: var(--klimascore-background, var(--ion-color-light));

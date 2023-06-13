@@ -3,7 +3,6 @@
     <ion-content>
       <ion-tabs>
         <ion-router-outlet></ion-router-outlet>
-        <!-- <slot></slot> -->
         <ion-tab-bar slot="bottom">
           <ion-tab-button tab="guide" href="/einkaufen/guide">
             <!-- <ion-icon :icon="radioOutline" /> -->

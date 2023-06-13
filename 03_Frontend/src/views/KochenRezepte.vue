@@ -26,7 +26,7 @@
           v-for="(recipe, index) in recipeEntriesFiltered.slice(0, numberOfDisplayedRecipes)"
           :key="index"
           :recipe-object="recipe"
-          :is-favorite="userFavoriteRecipeIds ? userFavoriteRecipeIds.includes(parseInt(recipe.id)) : false"
+          :is-favorite="userFavoriteRecipeIds ? userFavoriteRecipeIds.includes(recipe.id) : false"
         ></RecipeCard>
 
         <ion-infinite-scroll
@@ -51,7 +51,7 @@
           <ion-input placeholder="Nach Rezept (oder Zutat) suchen" v-model.lazy="recipeSearchTerm"></ion-input>
           <ion-icon class="o-search-1" slot="end"></ion-icon>
           <!-- <div id="recipe-filter-button" slot="end">
-            <ion-icon class="o-settings-1" @click="iconClicked()"></ion-icon>
+            <ion-icon class="o-settings-1"></ion-icon>
             <ion-badge>1</ion-badge>
           </div> -->
         </ion-item>

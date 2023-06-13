@@ -1,5 +1,5 @@
 <template>
-  <ion-card>
+  <ion-card v-if="discoveryObject">
     <img
       v-if="discoveryObject.main_image !== 'discovery-default.jpg'"
       :src="`${tblVars.baseCdnUrl}/img/discovery/${discoveryObject.main_image}`"
@@ -11,7 +11,7 @@
     <ion-card-content
       v-html="discoveryObject.content.replace('../img/', `${tblVars.baseCdnUrl}/img/`)"
     ></ion-card-content>
-    <ion-button expand="block" fill="solid" @click="openInAppBrowser(discoveryObject.external_url)"
+    <ion-button v-if="discoveryObject.external_url" expand="block" fill="solid" @click="openInAppBrowser(discoveryObject.external_url)"
       >Mehr erfahren</ion-button
     >
   </ion-card>

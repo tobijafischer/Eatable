@@ -280,15 +280,6 @@ ion-toolbar {
 }
 ion-button.like-heart {
   --ion-toolbar-color: var(--ion-color-tertiary, var(--ion-color-light));
-  /* background-color: transparent;
-  visibility: visible;
-  --background: none;
-  --box-shadow: none;
-  --background-activated: none;
-  --background-hover: none;
-  --ion-toolbar-color: transparent;
-  --color-activated: var(--ion-color-light);
-  color: var(--ion-color-tertiary, var(--ion-color-light)); */
 }
 h3 {
   font-size: 18px;
